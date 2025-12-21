@@ -1,0 +1,853 @@
+2025-12-21 22:59:21 | INFO | telecom_pipeline | Logging initialized successfully
+2025-12-21 23:06:59 | INFO | telecom_pipeline | Excel data loaded with correct header row
+2025-12-21 23:06:59 | INFO | telecom_pipeline | DataFrame info displayed:
+2025-12-21 23:07:02 | INFO | telecom_pipeline | Column names cleaned: ['Bearer Id', 'Start', 'Start ms', 'End', 'End ms', 'Dur. (ms)', 'IMSI', 'MSISDN/Number', 'IMEI', 'Last Location Name', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Handset Manufacturer', 'Handset Type', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-21 23:07:02 | INFO | telecom_pipeline | Numeric columns: ['Start', 'Start ms', 'End', 'End ms', 'Dur. (ms)', 'IMSI', 'MSISDN/Number', 'IMEI', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-21 23:07:02 | INFO | telecom_pipeline | Categorical columns: ['Bearer Id', 'Last Location Name', 'Handset Manufacturer', 'Handset Type']
+2025-12-21 23:07:06 | INFO | telecom_pipeline | Dropped columns with >40% missing values: ['HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)']
+2025-12-21 23:07:07 | INFO | telecom_pipeline | Found 0 duplicate rows in the DataFrame.
+2025-12-21 23:07:09 | INFO | telecom_pipeline | Number of duplicate rows: 0
+2025-12-21 23:07:10 | INFO | telecom_pipeline | After cleaning, DataFrame shape: (150001, 45)
+2025-12-21 23:07:11 | INFO | telecom_pipeline | After removing constant columns, DataFrame shape: (150001, 45)
+2025-12-21 23:07:13 | INFO | telecom_pipeline | Missing values handled safely using dynamic schema detection.
+2025-12-21 23:07:14 | INFO | telecom_pipeline | Final DataFrame info displayed.
+2025-12-21 23:07:16 | INFO | telecom_pipeline | Correlation matrix computed for numeric features.
+2025-12-21 23:07:27 | INFO | telecom_pipeline | Filtered correlation heatmap plotted.
+2025-12-21 23:07:28 | INFO | telecom_pipeline | Outlier summary DataFrame created successfully
+2025-12-21 23:07:28 | INFO | telecom_pipeline | IQR outlier detection complete for 41 numeric columns.
+2025-12-21 23:07:33 | INFO | telecom_pipeline | Univariate plots saved for: End at output/plots/univariate\End.png
+2025-12-21 23:07:34 | INFO | telecom_pipeline | Univariate plots saved for: Start at output/plots/univariate\Start.png
+2025-12-21 23:07:35 | INFO | telecom_pipeline | Univariate plots saved for: IMEI at output/plots/univariate\IMEI.png
+2025-12-21 23:07:36 | INFO | telecom_pipeline | Numeric columns used: 37
+2025-12-21 23:07:36 | INFO | telecom_pipeline | ['Start ms', 'End ms', 'Dur. (ms)', 'IMSI', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-21 23:07:53 | INFO | telecom_pipeline | Bivariate scatter plots generated and saved at output/plots/bivariate\top_correlated_pairs.png for feature pairs: Dur. (ms) vs Dur. (ms).1; Gaming DL (Bytes) vs Total DL (Bytes); Nb of sec with Vol DL < 6250B vs Nb of sec with Vol UL < 1250B; Activity Duration UL (ms) vs Activity Duration DL (ms); 250 Kbps < DL TP < 1 Mbps (%) vs DL TP < 50 Kbps (%)
+2025-12-21 23:07:54 | INFO | telecom_pipeline | PCA analysis complete.
+2025-12-21 23:07:54 | INFO | telecom_pipeline | PCA biplot plotted with top feature loadings.
+2025-12-21 23:08:01 | INFO | telecom_pipeline | PCA biplot saved at output/plots/multivariate\pca_biplot_pc1_pc2.png
+2025-12-21 23:08:20 | INFO | telecom_pipeline | 3D PCA scatter plot displayed.
+2025-12-21 23:08:23 | INFO | telecom_pipeline | Cleaned data saved as parquet: e:\DData\Projects\DSC\NextHikes\Python\tellco-due-diligence-pro-5\data\cleaned_telecom_data.parquet
+2025-12-21 23:08:25 | INFO | telecom_pipeline | Cleaned data saved to Parquet
+2025-12-21 23:08:25 | INFO | telecom_pipeline | Computed top 10 handsets used by customers:                      User Count  count
+0              Huawei B528S-23A  20324
+1       Apple iPhone 6S (A1688)   9419
+2        Apple iPhone 6 (A1586)   9023
+3                     undefined   8987
+4        Apple iPhone 7 (A1778)   6326
+5       Apple iPhone Se (A1723)   5187
+6        Apple iPhone 8 (A1905)   4993
+7       Apple iPhone Xr (A2105)   4568
+8  Samsung Galaxy S8 (Sm-G950F)   4520
+9        Apple iPhone X (A1901)   3813
+2025-12-21 23:08:25 | INFO | telecom_pipeline | Identified top 3 handset manufacturers:   User Count  count
+0      Apple  60137
+1    Samsung  40839
+2     Huawei  34423
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Extracted top 5 handsets for each of the top 3 manufacturers:     Handset Manufacturer                    Handset Type  User Count
+35                 Apple         Apple iPhone 6S (A1688)        9419
+31                 Apple          Apple iPhone 6 (A1586)        9023
+41                 Apple          Apple iPhone 7 (A1778)        6326
+55                 Apple         Apple iPhone Se (A1723)        5187
+48                 Apple          Apple iPhone 8 (A1905)        4993
+84                Huawei                Huawei B528S-23A       19752
+105               Huawei                    Huawei E5180        2079
+184               Huawei  Huawei P20 Lite Huawei Nova 3E        2021
+183               Huawei                      Huawei P20        1480
+225               Huawei                  Huawei Y6 2018         997
+360              Samsung    Samsung Galaxy S8 (Sm-G950F)        4520
+243              Samsung      Samsung Galaxy A5 Sm-A520F        3724
+293              Samsung     Samsung Galaxy J5 (Sm-J530)        3696
+285              Samsung     Samsung Galaxy J3 (Sm-J330)        3484
+358              Samsung    Samsung Galaxy S7 (Sm-G930X)        3199
+2025-12-21 23:08:26 | INFO | telecom_pipeline | User Overview Analysis results grouped
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Saved top_10_handsets to parquet
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Saved top_3_manufacturers to parquet
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Saved top_5_handsets_per_top_manufacturer to parquet
+2025-12-21 23:08:26 | INFO | telecom_pipeline | User overview analysis saved to Parquet files.
+2025-12-21 23:08:26 | INFO | telecom_pipeline | User Overview Analysis results grouped
+2025-12-21 23:08:26 | INFO | telecom_pipeline | User Overview Analysis prepared for Excel
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Aggregated xDR metrics at user level
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Computed total DL+UL data per application
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Missing values handled using mean imputation
+2025-12-21 23:08:26 | INFO | telecom_pipeline | Extracted variable data types for reporting
+2025-12-21 23:08:27 | INFO | telecom_pipeline | Computed basic statistical metrics
+2025-12-21 23:08:27 | INFO | telecom_pipeline | Computed dispersion statistics for quantitative variables:                             mean        median           std           var  \
+MSISDN/Number       4.511471e+10  3.366365e+10  2.889410e+12  8.348690e+24   
+xdr_sessions        1.403755e+00  1.000000e+00  3.355032e+00  1.125624e+01   
+total_duration      1.468447e+05  1.027410e+05  2.894646e+05  8.378975e+10   
+social_media_dl     2.520191e+06  2.265021e+06  6.213715e+06  3.861025e+13   
+social_media_ul     4.622344e+04  4.156000e+04  1.156359e+05  1.337166e+10   
+google_dl           8.072645e+06  7.256793e+06  1.933071e+07  3.736764e+14   
+google_ul           2.886880e+06  2.593341e+06  7.182177e+06  5.158366e+13   
+email_dl            2.515148e+06  2.266287e+06  6.118615e+06  3.743745e+13   
+email_ul            6.560776e+05  5.873010e+05  1.593606e+06  2.539579e+12   
+youtube_dl          1.633138e+07  1.460566e+07  4.011289e+07  1.609044e+15   
+youtube_ul          1.545451e+07  1.386745e+07  3.800497e+07  1.444378e+15   
+netflix_dl          1.632125e+07  1.464004e+07  3.951288e+07  1.561268e+15   
+netflix_ul          1.544376e+07  1.387833e+07  3.835398e+07  1.471028e+15   
+gaming_dl           5.924472e+08  5.325210e+08  1.452730e+09  2.110425e+18   
+gaming_ul           1.163488e+07  1.044661e+07  2.807267e+07  7.880751e+14   
+other_dl            5.911218e+08  5.299499e+08  1.421185e+09  2.019768e+18   
+other_ul            1.160175e+07  1.037692e+07  2.898872e+07  8.403458e+14   
+social_media_total  2.566415e+06  2.303811e+06  6.325032e+06  4.000603e+13   
+google_total        1.095953e+07  9.586186e+06  2.630542e+07  6.919751e+14   
+email_total         3.171225e+06  2.799854e+06  7.661339e+06  5.869612e+13   
+youtube_total       3.178589e+07  2.680040e+07  7.735388e+07  5.983623e+15   
+netflix_total       3.176501e+07  2.671955e+07  7.709618e+07  5.943821e+15   
+gaming_total        6.040820e+08  5.423501e+08  1.479703e+09  2.189520e+18   
+other_total         6.027236e+08  5.398401e+08  1.449064e+09  2.099786e+18   
+
+                             min           max  
+MSISDN/Number       3.360100e+10  8.823971e+14  
+xdr_sessions        1.000000e+00  1.066000e+03  
+total_duration      7.142000e+03  7.255100e+07  
+social_media_dl     1.200000e+01  1.937715e+09  
+social_media_ul     0.000000e+00  3.610230e+07  
+google_dl           2.070000e+02  6.007942e+09  
+google_ul           3.000000e+00  2.240634e+09  
+email_dl            9.700000e+01  1.904048e+09  
+email_ul            1.400000e+01  4.958324e+08  
+youtube_dl          5.300000e+01  1.249464e+10  
+youtube_ul          1.060000e+02  1.184609e+10  
+netflix_dl          4.200000e+01  1.228898e+10  
+netflix_ul          3.500000e+01  1.196459e+10  
+gaming_dl           2.516000e+03  4.527450e+11  
+gaming_ul           5.900000e+01  8.733066e+09  
+other_dl            3.290000e+03  4.419283e+11  
+other_ul            1.560000e+02  9.050107e+09  
+social_media_total  1.563000e+03  1.973817e+09  
+google_total        4.033000e+04  8.248577e+09  
+email_total         1.817600e+04  2.399880e+09  
+youtube_total       7.890300e+04  2.434073e+10  
+netflix_total       1.845690e+05  2.425357e+10  
+gaming_total        3.063580e+05  4.614780e+11  
+other_total         1.490450e+05  4.509784e+11  
+2025-12-21 23:08:28 | INFO | telecom_pipeline | Plotted univariate distribution for session duration
+2025-12-21 23:08:37 | INFO | telecom_pipeline | Completed bivariate analysis between apps and total data usage
+2025-12-21 23:08:37 | INFO | telecom_pipeline | Segmented users into duration-based deciles:    duration_decile    total_data
+0                0  2.128360e+13
+1                1  2.327880e+13
+2                2  2.147313e+13
+3                3  2.578692e+13
+4                4  4.570824e+13
+2025-12-21 23:08:37 | INFO | telecom_pipeline | Computed correlation matrix for application data usage:                     social_media_total  google_total  email_total  \
+social_media_total            1.000000      0.968997     0.967901   
+google_total                  0.968997      1.000000     0.974074   
+email_total                   0.967901      0.974074     1.000000   
+youtube_total                 0.971348      0.977704     0.976294   
+netflix_total                 0.971320      0.977460     0.976301   
+gaming_total                  0.962460      0.968683     0.967100   
+other_total                   0.961808      0.967954     0.966628   
+
+                    youtube_total  netflix_total  gaming_total  other_total  
+social_media_total       0.971348       0.971320      0.962460     0.961808  
+google_total             0.977704       0.977460      0.968683     0.967954  
+email_total              0.976294       0.976301      0.967100     0.966628  
+youtube_total            1.000000       0.980116      0.970937     0.970384  
+netflix_total            0.980116       1.000000      0.970874     0.969937  
+gaming_total             0.970937       0.970874      1.000000     0.961084  
+other_total              0.970384       0.969937      0.961084     1.000000  
+2025-12-21 23:08:37 | INFO | telecom_pipeline | Performed PCA for dimensionality reduction
+2025-12-21 23:08:38 | INFO | telecom_pipeline | Aggregated engagement metrics per customer:         MSISDN/Number  sessions_frequency  total_session_duration  \
+0        3.360100e+10                   1            1.167200e+05   
+1        3.360100e+10                   1            1.812300e+05   
+2        3.360100e+10                   1            1.349690e+05   
+3        3.360101e+10                   1            4.987800e+04   
+4        3.360101e+10                   2            3.710400e+04   
+...               ...                 ...                     ...   
+106852   3.379000e+10                   1            1.409880e+05   
+106853   4.188282e+10                 502            7.255100e+07   
+106854   3.197021e+12                   1            8.773850e+05   
+106855   3.370000e+14                   1            2.530300e+05   
+106856   8.823971e+14                   1            8.698440e+05   
+
+        total_download_bytes  total_upload_bytes  total_traffic_bytes  
+0               8.426375e+08        3.605311e+07         8.786906e+08  
+1               1.207552e+08        3.610446e+07         1.568596e+08  
+2               5.566597e+08        3.930682e+07         5.959665e+08  
+3               4.019932e+08        2.032753e+07         4.223207e+08  
+4               1.363130e+09        9.428053e+07         1.457411e+09  
+...                      ...                 ...                  ...  
+106852          4.445751e+08        3.573224e+07         4.803073e+08  
+106853          4.873783e+11        4.436642e+10         5.317447e+11  
+106854          1.948281e+08        3.729592e+07         2.321240e+08  
+106855          5.396350e+08        5.665284e+07         5.962878e+08  
+106856          7.869760e+07        6.045605e+07         1.391536e+08  
+
+[106857 rows x 6 columns]
+2025-12-21 23:08:38 | INFO | telecom_pipeline | User engagement metrics saved to parquet
+2025-12-21 23:08:42 | INFO | telecom_pipeline | KMeans clustering applied with k=3: {0: 97329, 2: 9527, 1: 1}
+2025-12-21 23:08:42 | INFO | telecom_pipeline | Computed cluster-level engagement statistics:    engagement_cluster  min_sessions  max_sessions  avg_sessions  \
+0                   0             1             3      1.201543   
+1                   1           502           502    502.000000   
+2                   2             1            18      3.202582   
+
+   total_sessions  min_duration  max_duration  avg_duration  total_duration  \
+0          116945  7.142000e+03  5.741210e+05  1.140256e+05    1.109800e+10   
+1             502  7.255100e+07  7.255100e+07  7.255100e+07    7.255100e+07   
+2           30511  4.689600e+04  1.855375e+07  4.745294e+05    4.520842e+09   
+
+    min_traffic   max_traffic   avg_traffic  total_traffic  
+0  3.324901e+07  2.986226e+09  5.958400e+08   5.799251e+13  
+1  5.317447e+11  5.317447e+11  5.317447e+11   5.317447e+11  
+2  5.714004e+07  8.846226e+09  1.662741e+09   1.584094e+13  
+2025-12-21 23:08:43 | INFO | telecom_pipeline | Compiled application-level engagement metrics:         MSISDN/Number  total_traffic   application
+0        3.360100e+10   2.206504e+06  Social Media
+1        3.360100e+10   2.598548e+06  Social Media
+2        3.360100e+10   3.148004e+06  Social Media
+3        3.360101e+10   2.514690e+05  Social Media
+4        3.360101e+10   2.861230e+06  Social Media
+...               ...            ...           ...
+641137   3.379000e+10   4.276202e+08        Gaming
+641138   4.188282e+10   4.527450e+11        Gaming
+641139   3.197021e+12   1.645636e+08        Gaming
+641140   3.370000e+14   5.012590e+08        Gaming
+641141   8.823971e+14   2.809228e+07        Gaming
+
+[641142 rows x 3 columns]
+2025-12-21 23:08:47 | INFO | telecom_pipeline | Computed top 10 engaged users per application:         MSISDN/Number  total_traffic   application
+213710   4.188282e+10   1.249464e+10       YouTube
+120037   3.362578e+10   2.378830e+08       YouTube
+113294   3.361489e+10   1.998234e+08       YouTube
+199780   3.376054e+10   1.940683e+08       YouTube
+120851   3.362708e+10   1.873233e+08       YouTube
+199434   3.376041e+10   1.742460e+08       YouTube
+193312   3.369879e+10   1.669003e+08       YouTube
+120383   3.362632e+10   1.640487e+08       YouTube
+107523   3.360313e+10   1.589767e+08       YouTube
+183220   3.367588e+10   1.586652e+08       YouTube
+106853   4.188282e+10   1.937715e+09  Social Media
+13526    3.362632e+10   4.274384e+07  Social Media
+92923    3.376054e+10   3.929765e+07  Social Media
+37052    3.365973e+10   3.490044e+07  Social Media
+6437     3.361489e+10   2.774974e+07  Social Media
+13180    3.362578e+10   2.656412e+07  Social Media
+65118    3.366716e+10   2.375375e+07  Social Media
+106137   3.378632e+10   2.356866e+07  Social Media
+70960    3.366907e+10   2.347705e+07  Social Media
+666      3.360313e+10   2.277668e+07  Social Media
+320567   4.188282e+10   1.228898e+10       Netflix
+227240   3.362632e+10   1.994792e+08       Netflix
+250766   3.365973e+10   1.962772e+08       Netflix
+226894   3.362578e+10   1.939122e+08       Netflix
+220151   3.361489e+10   1.795860e+08       Netflix
+278832   3.366716e+10   1.679324e+08       Netflix
+308368   3.376127e+10   1.672611e+08       Netflix
+306291   3.376041e+10   1.670238e+08       Netflix
+319851   3.378632e+10   1.636027e+08       Netflix
+290077   3.367588e+10   1.616265e+08       Netflix
+427424   4.188282e+10   6.007942e+09        Google
+334097   3.362632e+10   1.161065e+08        Google
+333751   3.362578e+10   1.079047e+08        Google
+327008   3.361489e+10   9.394171e+07        Google
+357623   3.365973e+10   9.095855e+07        Google
+413494   3.376054e+10   8.862653e+07        Google
+396934   3.367588e+10   8.300299e+07        Google
+426708   3.378632e+10   7.881981e+07        Google
+321237   3.360313e+10   7.394206e+07        Google
+415225   3.376127e+10   7.294980e+07        Google
+641138   4.188282e+10   4.527450e+11        Gaming
+540722   3.361489e+10   7.622035e+09        Gaming
+627208   3.376054e+10   7.316364e+09        Gaming
+547465   3.362578e+10   7.171884e+09        Gaming
+610648   3.367588e+10   6.863307e+09        Gaming
+547811   3.362632e+10   6.745734e+09        Gaming
+571337   3.365973e+10   6.609900e+09        Gaming
+597313   3.366646e+10   6.546328e+09        Gaming
+626862   3.376041e+10   6.170943e+09        Gaming
+591526   3.366471e+10   6.013562e+09        Gaming
+534281   4.188282e+10   1.904048e+09         Email
+433865   3.361489e+10   3.360721e+07         Email
+440954   3.362632e+10   3.340478e+07         Email
+440608   3.362578e+10   3.189541e+07         Email
+533565   3.378632e+10   3.087691e+07         Email
+464480   3.365973e+10   2.990765e+07         Email
+520351   3.376054e+10   2.643790e+07         Email
+487515   3.366546e+10   2.594287e+07         Email
+503791   3.367588e+10   2.428472e+07         Email
+513883   3.369879e+10   2.416560e+07         Email
+2025-12-21 23:08:47 | INFO | telecom_pipeline | Identified top 3 applications by total traffic:   application  total_traffic
+0      Gaming   6.330713e+13
+1     YouTube   1.745123e+12
+2     Netflix   1.744039e+12
+2025-12-21 23:08:48 | INFO | telecom_pipeline | Plotted top 3 applications by total traffic
+2025-12-21 23:08:49 | INFO | telecom_pipeline | Elbow method data prepared for k selection
+2025-12-21 23:08:50 | INFO | telecom_pipeline | User engagement analysis results saved to Parquet files.
+2025-12-21 23:08:50 | WARNING | telecom_pipeline | TCP retransmission columns not found. Assuming zero retransmission.
+2025-12-21 23:08:50 | INFO | telecom_pipeline | Experience metrics prepared successfully (TCP/RTT/Throughput handled dynamically)
+2025-12-21 23:08:50 | INFO | telecom_pipeline | Aggregated experience metrics per customer
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Computed top, bottom & frequent experience values safely
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Computed experience metrics per handset type
+2025-12-21 23:08:51 | INFO | telecom_pipeline | KMeans clustering applied on experience metrics
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Computed experience cluster summary:    experience_cluster  avg_tcp     avg_rtt        avg_tp  users
+0                   0      0.0  136.192378   3592.490527  31431
+1                   1      0.0   63.378899  35568.690736  22337
+2                   2      0.0   41.714222   2573.465363  53089
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Experience analytics saved to parquet
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Prepared experience analytics for Excel export:                             Section  MSISDN/Number  avg_tcp_retransmission  \
+0       CUSTOMER EXPERIENCE METRICS            NaN                     NaN   
+1                               NaN   3.360100e+10                     0.0   
+2                               NaN   3.360100e+10                     0.0   
+3                               NaN   3.360100e+10                     0.0   
+4                               NaN   3.360101e+10                     0.0   
+...                             ...            ...                     ...   
+106857                          NaN   8.823971e+14                     0.0   
+106858   EXPERIENCE CLUSTER SUMMARY            NaN                     NaN   
+106859                          NaN            NaN                     NaN   
+106860                          NaN            NaN                     NaN   
+106861                          NaN            NaN                     NaN   
+
+           avg_rtt  avg_throughput                      handset_type  \
+0              NaN             NaN                               NaN   
+1        46.000000            37.0    Huawei P20 Lite Huawei Nova 3E   
+2        30.000000            48.0            Apple iPhone 7 (A1778)   
+3       109.795706            48.0                         undefined   
+4        69.000000           204.0           Apple iPhone 5S (A1457)   
+...            ...             ...                               ...   
+106857  109.795706             2.0  Quectel Wireless. Quectel Ec21-E   
+106858         NaN             NaN                               NaN   
+106859  136.192378             NaN                               NaN   
+106860   63.378899             NaN                               NaN   
+106861   41.714222             NaN                               NaN   
+
+        experience_cluster  avg_tcp        avg_tp    users  
+0                      NaN      NaN           NaN      NaN  
+1                      2.0      NaN           NaN      NaN  
+2                      2.0      NaN           NaN      NaN  
+3                      0.0      NaN           NaN      NaN  
+4                      2.0      NaN           NaN      NaN  
+...                    ...      ...           ...      ...  
+106857                 0.0      NaN           NaN      NaN  
+106858                 NaN      NaN           NaN      NaN  
+106859                 0.0      0.0   3592.490527  31431.0  
+106860                 1.0      0.0  35568.690736  22337.0  
+106861                 2.0      0.0   2573.465363  53089.0  
+
+[106862 rows x 10 columns]
+2025-12-21 23:08:51 | INFO | telecom_pipeline | Merged engagement and experience data for satisfaction analysis
+2025-12-21 23:10:31 | INFO | telecom_pipeline | Engagement score computed using Euclidean distance
+2025-12-21 23:12:12 | INFO | telecom_pipeline | Experience score computed using Euclidean distance
+2025-12-21 23:12:12 | INFO | telecom_pipeline | Top 10 satisfied customers identified:         MSISDN/Number  sessions_frequency  total_session_duration  \
+106853   4.188282e+10                 502            7.255100e+07   
+6437     3.361489e+10                  17            9.966898e+06   
+92923    3.376054e+10                  15            9.279434e+06   
+13180    3.362578e+10                  17            1.855375e+07   
+13526    3.362632e+10                  18            8.791927e+06   
+76363    3.367588e+10                  15            4.865947e+06   
+37052    3.365973e+10                  16            4.035428e+06   
+63028    3.366646e+10                  11            4.536757e+06   
+92577    3.376041e+10                  12            5.321667e+06   
+57241    3.366471e+10                   7            2.927785e+06   
+
+        total_download_bytes  total_upload_bytes  total_traffic_bytes  \
+106853          4.873783e+11        4.436642e+10         5.317447e+11   
+6437            8.156743e+09        6.894830e+08         8.846226e+09   
+92923           7.811295e+09        7.034786e+08         8.514774e+09   
+13180           7.770043e+09        7.295774e+08         8.499621e+09   
+13526           7.301517e+09        6.696507e+08         7.971167e+09   
+76363           7.309542e+09        5.815688e+08         7.891111e+09   
+37052           7.081602e+09        6.242603e+08         7.705863e+09   
+63028           6.903440e+09        4.050610e+08         7.308501e+09   
+92577           6.610852e+09        5.215189e+08         7.132371e+09   
+57241           6.400774e+09        4.712445e+08         6.872018e+09   
+
+        engagement_cluster  avg_tcp_retransmission     avg_rtt  \
+106853                   1                     0.0  100.586812   
+6437                     2                     0.0   65.222014   
+92923                    2                     0.0  112.196422   
+13180                    2                     0.0   37.987983   
+13526                    2                     0.0   63.520314   
+76363                    2                     0.0   65.266667   
+37052                    2                     0.0   47.937500   
+63028                    2                     0.0   68.034217   
+92577                    2                     0.0   79.848569   
+57241                    2                     0.0   67.617791   
+
+        avg_throughput  experience_cluster  engagement_score  \
+106853    13216.922182                   0      5.311489e+11   
+6437      21199.147059                   1      8.250392e+09   
+92923      8690.900000                   0      7.918939e+09   
+13180     10629.911765                   2      7.903802e+09   
+13526      6101.944444                   2      7.375332e+09   
+76363     12840.600000                   2      7.295272e+09   
+37052     13706.687500                   2      7.110024e+09   
+63028     18252.181818                   1      6.712662e+09   
+92577     18710.000000                   1      6.536533e+09   
+57241     25502.227273                   1      6.276179e+09   
+
+        experience_score  satisfaction_score  
+106853      10643.619640        2.655744e+11  
+6437        18625.696531        4.125206e+09  
+92923        6117.840655        3.959473e+09  
+13180        8056.447264        3.951905e+09  
+13526        3528.546462        3.687668e+09  
+76363       10267.161651        3.647641e+09  
+37052       11133.223876        3.555018e+09  
+63028       15678.738547        3.356339e+09  
+92577       16136.579697        3.268274e+09  
+57241       22928.776542        3.138101e+09  
+2025-12-21 23:12:12 | INFO | telecom_pipeline | Regression Model → R2: 0.229, RMSE: 158274972.070
+2025-12-21 23:12:12 | INFO | telecom_pipeline | KMeans clustering applied on satisfaction scores
+2025-12-21 23:12:12 | INFO | telecom_pipeline | Computed satisfaction cluster summary:    satisfaction_cluster  avg_engagement_score  avg_experience_score  \
+0                     0          3.376880e+08          10085.809573   
+1                     1          5.311489e+11          10643.619640   
+
+   avg_satisfaction_score   users  
+0            1.688490e+08  106856  
+1            2.655744e+11       1  
+2025-12-21 23:12:23 | INFO | telecom_pipeline | Data inserted into SQL table '        MSISDN/Number  engagement_score  experience_score  satisfaction_score  \
+0        3.360100e+10      2.828506e+08       2536.468984        1.414266e+08   
+1        3.360100e+10      4.389803e+08       2525.492531        2.194914e+08   
+2        3.360100e+10      1.282256e+05       2526.382866        6.537601e+04   
+3        3.360101e+10      1.735193e+08       2369.622463        8.676083e+07   
+4        3.360101e+10      8.615710e+08      17624.041266        4.307943e+08   
+...               ...               ...               ...                 ...   
+106852   3.379000e+10      1.155326e+08       2505.477239        5.776758e+07   
+106853   4.188282e+10      5.311489e+11      10643.619640        2.655744e+11   
+106854   3.197021e+12      3.637168e+08       2573.366109        1.818597e+08   
+106855   3.370000e+14      4.689212e+05       2563.369623        2.357423e+05   
+106856   8.823971e+14      4.566870e+08       2572.366459        2.283448e+08   
+
+        satisfaction_cluster  
+0                          0  
+1                          0  
+2                          0  
+3                          0  
+4                          0  
+...                      ...  
+106852                     0  
+106853                     1  
+106854                     0  
+106855                     0  
+106856                     0  
+
+[106857 rows x 5 columns]' successfully.
+2025-12-21 23:12:24 | INFO | telecom_pipeline | Customer satisfaction analysis results prepared for Excel export
+2025-12-22 02:49:53 | INFO | telecom_pipeline | Logging initialized successfully
+2025-12-22 02:54:57 | INFO | telecom_pipeline | Excel data loaded with correct header row
+2025-12-22 02:54:57 | INFO | telecom_pipeline | DataFrame info displayed:
+2025-12-22 02:55:00 | INFO | telecom_pipeline | Column names cleaned: ['Bearer Id', 'Start', 'Start ms', 'End', 'End ms', 'Dur. (ms)', 'IMSI', 'MSISDN/Number', 'IMEI', 'Last Location Name', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Handset Manufacturer', 'Handset Type', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-22 02:55:01 | INFO | telecom_pipeline | Numeric columns: ['Start', 'Start ms', 'End', 'End ms', 'Dur. (ms)', 'IMSI', 'MSISDN/Number', 'IMEI', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-22 02:55:01 | INFO | telecom_pipeline | Categorical columns: ['Bearer Id', 'Last Location Name', 'Handset Manufacturer', 'Handset Type']
+2025-12-22 02:55:04 | INFO | telecom_pipeline | Dropped columns with >40% missing values: ['HTTP DL (Bytes)', 'HTTP UL (Bytes)', 'Nb of sec with 125000B < Vol DL', 'Nb of sec with 1250B < Vol UL < 6250B', 'Nb of sec with 31250B < Vol DL < 125000B', 'Nb of sec with 37500B < Vol UL', 'Nb of sec with 6250B < Vol DL < 31250B', 'Nb of sec with 6250B < Vol UL < 37500B', 'TCP DL Retrans. Vol (Bytes)', 'TCP UL Retrans. Vol (Bytes)']
+2025-12-22 02:55:06 | INFO | telecom_pipeline | Found 0 duplicate rows in the DataFrame.
+2025-12-22 02:55:08 | INFO | telecom_pipeline | Number of duplicate rows: 0
+2025-12-22 02:55:09 | INFO | telecom_pipeline | After cleaning, DataFrame shape: (150001, 45)
+2025-12-22 02:55:10 | INFO | telecom_pipeline | After removing constant columns, DataFrame shape: (150001, 45)
+2025-12-22 02:55:12 | INFO | telecom_pipeline | Missing values handled safely using dynamic schema detection.
+2025-12-22 02:55:13 | INFO | telecom_pipeline | Final DataFrame info displayed.
+2025-12-22 02:55:16 | INFO | telecom_pipeline | Correlation matrix computed for numeric features.
+2025-12-22 02:55:29 | INFO | telecom_pipeline | Filtered correlation heatmap plotted.
+2025-12-22 02:55:30 | INFO | telecom_pipeline | Outlier summary DataFrame created successfully
+2025-12-22 02:55:30 | INFO | telecom_pipeline | IQR outlier detection complete for 41 numeric columns.
+2025-12-22 02:55:35 | INFO | telecom_pipeline | Univariate plots saved for: End at output/plots/univariate\End.png
+2025-12-22 02:55:37 | INFO | telecom_pipeline | Univariate plots saved for: Start at output/plots/univariate\Start.png
+2025-12-22 02:55:38 | INFO | telecom_pipeline | Univariate plots saved for: IMEI at output/plots/univariate\IMEI.png
+2025-12-22 02:55:39 | INFO | telecom_pipeline | Numeric columns used: 37
+2025-12-22 02:55:39 | INFO | telecom_pipeline | ['Start ms', 'End ms', 'Dur. (ms)', 'IMSI', 'Avg RTT DL (ms)', 'Avg RTT UL (ms)', 'Avg Bearer TP DL (kbps)', 'Avg Bearer TP UL (kbps)', 'DL TP < 50 Kbps (%)', '50 Kbps < DL TP < 250 Kbps (%)', '250 Kbps < DL TP < 1 Mbps (%)', 'DL TP > 1 Mbps (%)', 'UL TP < 10 Kbps (%)', '10 Kbps < UL TP < 50 Kbps (%)', '50 Kbps < UL TP < 300 Kbps (%)', 'UL TP > 300 Kbps (%)', 'Activity Duration DL (ms)', 'Activity Duration UL (ms)', 'Dur. (ms).1', 'Nb of sec with Vol DL < 6250B', 'Nb of sec with Vol UL < 1250B', 'Social Media DL (Bytes)', 'Social Media UL (Bytes)', 'Google DL (Bytes)', 'Google UL (Bytes)', 'Email DL (Bytes)', 'Email UL (Bytes)', 'Youtube DL (Bytes)', 'Youtube UL (Bytes)', 'Netflix DL (Bytes)', 'Netflix UL (Bytes)', 'Gaming DL (Bytes)', 'Gaming UL (Bytes)', 'Other DL (Bytes)', 'Other UL (Bytes)', 'Total UL (Bytes)', 'Total DL (Bytes)']
+2025-12-22 02:55:58 | INFO | telecom_pipeline | Bivariate scatter plots generated and saved at output/plots/bivariate\top_correlated_pairs.png for feature pairs: Dur. (ms) vs Dur. (ms).1; Gaming DL (Bytes) vs Total DL (Bytes); Nb of sec with Vol DL < 6250B vs Nb of sec with Vol UL < 1250B; Activity Duration UL (ms) vs Activity Duration DL (ms); 250 Kbps < DL TP < 1 Mbps (%) vs DL TP < 50 Kbps (%)
+2025-12-22 02:55:59 | INFO | telecom_pipeline | PCA analysis complete.
+2025-12-22 02:55:59 | INFO | telecom_pipeline | PCA biplot plotted with top feature loadings.
+2025-12-22 02:56:05 | INFO | telecom_pipeline | PCA biplot saved at output/plots/multivariate\pca_biplot_pc1_pc2.png
+2025-12-22 02:56:21 | INFO | telecom_pipeline | 3D PCA scatter plot displayed.
+2025-12-22 02:56:23 | INFO | telecom_pipeline | Cleaned data saved as parquet: e:\DData\Projects\DSC\NextHikes\Python\tellco-due-diligence-pro-5\data\cleaned_telecom_data.parquet
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Cleaned data saved to Parquet
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Computed top 10 handsets used by customers:                      User Count  count
+0              Huawei B528S-23A  20324
+1       Apple iPhone 6S (A1688)   9419
+2        Apple iPhone 6 (A1586)   9023
+3                     undefined   8987
+4        Apple iPhone 7 (A1778)   6326
+5       Apple iPhone Se (A1723)   5187
+6        Apple iPhone 8 (A1905)   4993
+7       Apple iPhone Xr (A2105)   4568
+8  Samsung Galaxy S8 (Sm-G950F)   4520
+9        Apple iPhone X (A1901)   3813
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Identified top 3 handset manufacturers:   User Count  count
+0      Apple  60137
+1    Samsung  40839
+2     Huawei  34423
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Extracted top 5 handsets for each of the top 3 manufacturers:     Handset Manufacturer                    Handset Type  User Count
+35                 Apple         Apple iPhone 6S (A1688)        9419
+31                 Apple          Apple iPhone 6 (A1586)        9023
+41                 Apple          Apple iPhone 7 (A1778)        6326
+55                 Apple         Apple iPhone Se (A1723)        5187
+48                 Apple          Apple iPhone 8 (A1905)        4993
+84                Huawei                Huawei B528S-23A       19752
+105               Huawei                    Huawei E5180        2079
+184               Huawei  Huawei P20 Lite Huawei Nova 3E        2021
+183               Huawei                      Huawei P20        1480
+225               Huawei                  Huawei Y6 2018         997
+360              Samsung    Samsung Galaxy S8 (Sm-G950F)        4520
+243              Samsung      Samsung Galaxy A5 Sm-A520F        3724
+293              Samsung     Samsung Galaxy J5 (Sm-J530)        3696
+285              Samsung     Samsung Galaxy J3 (Sm-J330)        3484
+358              Samsung    Samsung Galaxy S7 (Sm-G930X)        3199
+2025-12-22 02:56:24 | INFO | telecom_pipeline | User Overview Analysis results grouped
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Saved top_10_handsets to parquet
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Saved top_3_manufacturers to parquet
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Saved top_5_handsets_per_top_manufacturer to parquet
+2025-12-22 02:56:24 | INFO | telecom_pipeline | User overview analysis saved to Parquet files.
+2025-12-22 02:56:24 | INFO | telecom_pipeline | User Overview Analysis results grouped
+2025-12-22 02:56:24 | INFO | telecom_pipeline | User Overview Analysis prepared for Excel
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Aggregated xDR metrics at user level
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Computed total DL+UL data per application
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Missing values handled using mean imputation
+2025-12-22 02:56:24 | INFO | telecom_pipeline | Extracted variable data types for reporting
+2025-12-22 02:56:25 | INFO | telecom_pipeline | Computed basic statistical metrics
+2025-12-22 02:56:25 | INFO | telecom_pipeline | Computed dispersion statistics for quantitative variables:                             mean        median           std           var  \
+MSISDN/Number       4.511471e+10  3.366365e+10  2.889410e+12  8.348690e+24   
+xdr_sessions        1.403755e+00  1.000000e+00  3.355032e+00  1.125624e+01   
+total_duration      1.468447e+05  1.027410e+05  2.894646e+05  8.378975e+10   
+social_media_dl     2.520191e+06  2.265021e+06  6.213715e+06  3.861025e+13   
+social_media_ul     4.622344e+04  4.156000e+04  1.156359e+05  1.337166e+10   
+google_dl           8.072645e+06  7.256793e+06  1.933071e+07  3.736764e+14   
+google_ul           2.886880e+06  2.593341e+06  7.182177e+06  5.158366e+13   
+email_dl            2.515148e+06  2.266287e+06  6.118615e+06  3.743745e+13   
+email_ul            6.560776e+05  5.873010e+05  1.593606e+06  2.539579e+12   
+youtube_dl          1.633138e+07  1.460566e+07  4.011289e+07  1.609044e+15   
+youtube_ul          1.545451e+07  1.386745e+07  3.800497e+07  1.444378e+15   
+netflix_dl          1.632125e+07  1.464004e+07  3.951288e+07  1.561268e+15   
+netflix_ul          1.544376e+07  1.387833e+07  3.835398e+07  1.471028e+15   
+gaming_dl           5.924472e+08  5.325210e+08  1.452730e+09  2.110425e+18   
+gaming_ul           1.163488e+07  1.044661e+07  2.807267e+07  7.880751e+14   
+other_dl            5.911218e+08  5.299499e+08  1.421185e+09  2.019768e+18   
+other_ul            1.160175e+07  1.037692e+07  2.898872e+07  8.403458e+14   
+social_media_total  2.566415e+06  2.303811e+06  6.325032e+06  4.000603e+13   
+google_total        1.095953e+07  9.586186e+06  2.630542e+07  6.919751e+14   
+email_total         3.171225e+06  2.799854e+06  7.661339e+06  5.869612e+13   
+youtube_total       3.178589e+07  2.680040e+07  7.735388e+07  5.983623e+15   
+netflix_total       3.176501e+07  2.671955e+07  7.709618e+07  5.943821e+15   
+gaming_total        6.040820e+08  5.423501e+08  1.479703e+09  2.189520e+18   
+other_total         6.027236e+08  5.398401e+08  1.449064e+09  2.099786e+18   
+
+                             min           max  
+MSISDN/Number       3.360100e+10  8.823971e+14  
+xdr_sessions        1.000000e+00  1.066000e+03  
+total_duration      7.142000e+03  7.255100e+07  
+social_media_dl     1.200000e+01  1.937715e+09  
+social_media_ul     0.000000e+00  3.610230e+07  
+google_dl           2.070000e+02  6.007942e+09  
+google_ul           3.000000e+00  2.240634e+09  
+email_dl            9.700000e+01  1.904048e+09  
+email_ul            1.400000e+01  4.958324e+08  
+youtube_dl          5.300000e+01  1.249464e+10  
+youtube_ul          1.060000e+02  1.184609e+10  
+netflix_dl          4.200000e+01  1.228898e+10  
+netflix_ul          3.500000e+01  1.196459e+10  
+gaming_dl           2.516000e+03  4.527450e+11  
+gaming_ul           5.900000e+01  8.733066e+09  
+other_dl            3.290000e+03  4.419283e+11  
+other_ul            1.560000e+02  9.050107e+09  
+social_media_total  1.563000e+03  1.973817e+09  
+google_total        4.033000e+04  8.248577e+09  
+email_total         1.817600e+04  2.399880e+09  
+youtube_total       7.890300e+04  2.434073e+10  
+netflix_total       1.845690e+05  2.425357e+10  
+gaming_total        3.063580e+05  4.614780e+11  
+other_total         1.490450e+05  4.509784e+11  
+2025-12-22 02:56:25 | INFO | telecom_pipeline | Plotted univariate distribution for session duration
+2025-12-22 02:56:29 | INFO | telecom_pipeline | Completed bivariate analysis between apps and total data usage
+2025-12-22 02:56:29 | INFO | telecom_pipeline | Segmented users into duration-based deciles:    duration_decile    total_data
+0                0  2.128360e+13
+1                1  2.327880e+13
+2                2  2.147313e+13
+3                3  2.578692e+13
+4                4  4.570824e+13
+2025-12-22 02:56:29 | INFO | telecom_pipeline | Computed correlation matrix for application data usage:                     social_media_total  google_total  email_total  \
+social_media_total            1.000000      0.968997     0.967901   
+google_total                  0.968997      1.000000     0.974074   
+email_total                   0.967901      0.974074     1.000000   
+youtube_total                 0.971348      0.977704     0.976294   
+netflix_total                 0.971320      0.977460     0.976301   
+gaming_total                  0.962460      0.968683     0.967100   
+other_total                   0.961808      0.967954     0.966628   
+
+                    youtube_total  netflix_total  gaming_total  other_total  
+social_media_total       0.971348       0.971320      0.962460     0.961808  
+google_total             0.977704       0.977460      0.968683     0.967954  
+email_total              0.976294       0.976301      0.967100     0.966628  
+youtube_total            1.000000       0.980116      0.970937     0.970384  
+netflix_total            0.980116       1.000000      0.970874     0.969937  
+gaming_total             0.970937       0.970874      1.000000     0.961084  
+other_total              0.970384       0.969937      0.961084     1.000000  
+2025-12-22 02:56:29 | INFO | telecom_pipeline | Performed PCA for dimensionality reduction
+2025-12-22 02:56:29 | INFO | telecom_pipeline | Aggregated engagement metrics per customer:         MSISDN/Number  sessions_frequency  total_session_duration  \
+0        3.360100e+10                   1            1.167200e+05   
+1        3.360100e+10                   1            1.812300e+05   
+2        3.360100e+10                   1            1.349690e+05   
+3        3.360101e+10                   1            4.987800e+04   
+4        3.360101e+10                   2            3.710400e+04   
+...               ...                 ...                     ...   
+106852   3.379000e+10                   1            1.409880e+05   
+106853   4.188282e+10                 502            7.255100e+07   
+106854   3.197021e+12                   1            8.773850e+05   
+106855   3.370000e+14                   1            2.530300e+05   
+106856   8.823971e+14                   1            8.698440e+05   
+
+        total_download_bytes  total_upload_bytes  total_traffic_bytes  
+0               8.426375e+08        3.605311e+07         8.786906e+08  
+1               1.207552e+08        3.610446e+07         1.568596e+08  
+2               5.566597e+08        3.930682e+07         5.959665e+08  
+3               4.019932e+08        2.032753e+07         4.223207e+08  
+4               1.363130e+09        9.428053e+07         1.457411e+09  
+...                      ...                 ...                  ...  
+106852          4.445751e+08        3.573224e+07         4.803073e+08  
+106853          4.873783e+11        4.436642e+10         5.317447e+11  
+106854          1.948281e+08        3.729592e+07         2.321240e+08  
+106855          5.396350e+08        5.665284e+07         5.962878e+08  
+106856          7.869760e+07        6.045605e+07         1.391536e+08  
+
+[106857 rows x 6 columns]
+2025-12-22 02:56:29 | INFO | telecom_pipeline | User engagement metrics saved to parquet
+2025-12-22 02:56:33 | INFO | telecom_pipeline | KMeans clustering applied with k=3: {0: 97329, 2: 9527, 1: 1}
+2025-12-22 02:56:33 | INFO | telecom_pipeline | Computed cluster-level engagement statistics:    engagement_cluster  min_sessions  max_sessions  avg_sessions  \
+0                   0             1             3      1.201543   
+1                   1           502           502    502.000000   
+2                   2             1            18      3.202582   
+
+   total_sessions  min_duration  max_duration  avg_duration  total_duration  \
+0          116945  7.142000e+03  5.741210e+05  1.140256e+05    1.109800e+10   
+1             502  7.255100e+07  7.255100e+07  7.255100e+07    7.255100e+07   
+2           30511  4.689600e+04  1.855375e+07  4.745294e+05    4.520842e+09   
+
+    min_traffic   max_traffic   avg_traffic  total_traffic  
+0  3.324901e+07  2.986226e+09  5.958400e+08   5.799251e+13  
+1  5.317447e+11  5.317447e+11  5.317447e+11   5.317447e+11  
+2  5.714004e+07  8.846226e+09  1.662741e+09   1.584094e+13  
+2025-12-22 02:56:33 | INFO | telecom_pipeline | Compiled application-level engagement metrics:         MSISDN/Number  total_traffic   application
+0        3.360100e+10   2.206504e+06  Social Media
+1        3.360100e+10   2.598548e+06  Social Media
+2        3.360100e+10   3.148004e+06  Social Media
+3        3.360101e+10   2.514690e+05  Social Media
+4        3.360101e+10   2.861230e+06  Social Media
+...               ...            ...           ...
+641137   3.379000e+10   4.276202e+08        Gaming
+641138   4.188282e+10   4.527450e+11        Gaming
+641139   3.197021e+12   1.645636e+08        Gaming
+641140   3.370000e+14   5.012590e+08        Gaming
+641141   8.823971e+14   2.809228e+07        Gaming
+
+[641142 rows x 3 columns]
+2025-12-22 02:56:35 | INFO | telecom_pipeline | Computed top 10 engaged users per application:         MSISDN/Number  total_traffic   application
+213710   4.188282e+10   1.249464e+10       YouTube
+120037   3.362578e+10   2.378830e+08       YouTube
+113294   3.361489e+10   1.998234e+08       YouTube
+199780   3.376054e+10   1.940683e+08       YouTube
+120851   3.362708e+10   1.873233e+08       YouTube
+199434   3.376041e+10   1.742460e+08       YouTube
+193312   3.369879e+10   1.669003e+08       YouTube
+120383   3.362632e+10   1.640487e+08       YouTube
+107523   3.360313e+10   1.589767e+08       YouTube
+183220   3.367588e+10   1.586652e+08       YouTube
+106853   4.188282e+10   1.937715e+09  Social Media
+13526    3.362632e+10   4.274384e+07  Social Media
+92923    3.376054e+10   3.929765e+07  Social Media
+37052    3.365973e+10   3.490044e+07  Social Media
+6437     3.361489e+10   2.774974e+07  Social Media
+13180    3.362578e+10   2.656412e+07  Social Media
+65118    3.366716e+10   2.375375e+07  Social Media
+106137   3.378632e+10   2.356866e+07  Social Media
+70960    3.366907e+10   2.347705e+07  Social Media
+666      3.360313e+10   2.277668e+07  Social Media
+320567   4.188282e+10   1.228898e+10       Netflix
+227240   3.362632e+10   1.994792e+08       Netflix
+250766   3.365973e+10   1.962772e+08       Netflix
+226894   3.362578e+10   1.939122e+08       Netflix
+220151   3.361489e+10   1.795860e+08       Netflix
+278832   3.366716e+10   1.679324e+08       Netflix
+308368   3.376127e+10   1.672611e+08       Netflix
+306291   3.376041e+10   1.670238e+08       Netflix
+319851   3.378632e+10   1.636027e+08       Netflix
+290077   3.367588e+10   1.616265e+08       Netflix
+427424   4.188282e+10   6.007942e+09        Google
+334097   3.362632e+10   1.161065e+08        Google
+333751   3.362578e+10   1.079047e+08        Google
+327008   3.361489e+10   9.394171e+07        Google
+357623   3.365973e+10   9.095855e+07        Google
+413494   3.376054e+10   8.862653e+07        Google
+396934   3.367588e+10   8.300299e+07        Google
+426708   3.378632e+10   7.881981e+07        Google
+321237   3.360313e+10   7.394206e+07        Google
+415225   3.376127e+10   7.294980e+07        Google
+641138   4.188282e+10   4.527450e+11        Gaming
+540722   3.361489e+10   7.622035e+09        Gaming
+627208   3.376054e+10   7.316364e+09        Gaming
+547465   3.362578e+10   7.171884e+09        Gaming
+610648   3.367588e+10   6.863307e+09        Gaming
+547811   3.362632e+10   6.745734e+09        Gaming
+571337   3.365973e+10   6.609900e+09        Gaming
+597313   3.366646e+10   6.546328e+09        Gaming
+626862   3.376041e+10   6.170943e+09        Gaming
+591526   3.366471e+10   6.013562e+09        Gaming
+534281   4.188282e+10   1.904048e+09         Email
+433865   3.361489e+10   3.360721e+07         Email
+440954   3.362632e+10   3.340478e+07         Email
+440608   3.362578e+10   3.189541e+07         Email
+533565   3.378632e+10   3.087691e+07         Email
+464480   3.365973e+10   2.990765e+07         Email
+520351   3.376054e+10   2.643790e+07         Email
+487515   3.366546e+10   2.594287e+07         Email
+503791   3.367588e+10   2.428472e+07         Email
+513883   3.369879e+10   2.416560e+07         Email
+2025-12-22 02:56:35 | INFO | telecom_pipeline | Identified top 3 applications by total traffic:   application  total_traffic
+0      Gaming   6.330713e+13
+1     YouTube   1.745123e+12
+2     Netflix   1.744039e+12
+2025-12-22 02:56:35 | INFO | telecom_pipeline | Plotted top 3 applications by total traffic
+2025-12-22 02:56:37 | INFO | telecom_pipeline | Elbow method data prepared for k selection
+2025-12-22 02:56:37 | INFO | telecom_pipeline | User engagement analysis results saved to Parquet files.
+2025-12-22 02:56:37 | WARNING | telecom_pipeline | TCP retransmission columns not found. Assuming zero retransmission.
+2025-12-22 02:56:37 | INFO | telecom_pipeline | Experience metrics prepared successfully (TCP/RTT/Throughput handled dynamically)
+2025-12-22 02:56:37 | INFO | telecom_pipeline | Aggregated experience metrics per customer
+2025-12-22 02:56:37 | INFO | telecom_pipeline | Computed top, bottom & frequent experience values safely
+2025-12-22 02:56:37 | INFO | telecom_pipeline | Computed experience metrics per handset type
+2025-12-22 02:56:38 | INFO | telecom_pipeline | KMeans clustering applied on experience metrics
+2025-12-22 02:56:38 | INFO | telecom_pipeline | Computed experience cluster summary:    experience_cluster  avg_tcp     avg_rtt        avg_tp  users
+0                   0      0.0  136.192378   3592.490527  31431
+1                   1      0.0   63.378899  35568.690736  22337
+2                   2      0.0   41.714222   2573.465363  53089
+2025-12-22 02:56:38 | INFO | telecom_pipeline | Experience analytics saved to parquet
+2025-12-22 02:56:38 | INFO | telecom_pipeline | Prepared experience analytics for Excel export:                             Section  MSISDN/Number  avg_tcp_retransmission  \
+0       CUSTOMER EXPERIENCE METRICS            NaN                     NaN   
+1                               NaN   3.360100e+10                     0.0   
+2                               NaN   3.360100e+10                     0.0   
+3                               NaN   3.360100e+10                     0.0   
+4                               NaN   3.360101e+10                     0.0   
+...                             ...            ...                     ...   
+106857                          NaN   8.823971e+14                     0.0   
+106858   EXPERIENCE CLUSTER SUMMARY            NaN                     NaN   
+106859                          NaN            NaN                     NaN   
+106860                          NaN            NaN                     NaN   
+106861                          NaN            NaN                     NaN   
+
+           avg_rtt  avg_throughput                      handset_type  \
+0              NaN             NaN                               NaN   
+1        46.000000            37.0    Huawei P20 Lite Huawei Nova 3E   
+2        30.000000            48.0            Apple iPhone 7 (A1778)   
+3       109.795706            48.0                         undefined   
+4        69.000000           204.0           Apple iPhone 5S (A1457)   
+...            ...             ...                               ...   
+106857  109.795706             2.0  Quectel Wireless. Quectel Ec21-E   
+106858         NaN             NaN                               NaN   
+106859  136.192378             NaN                               NaN   
+106860   63.378899             NaN                               NaN   
+106861   41.714222             NaN                               NaN   
+
+        experience_cluster  avg_tcp        avg_tp    users  
+0                      NaN      NaN           NaN      NaN  
+1                      2.0      NaN           NaN      NaN  
+2                      2.0      NaN           NaN      NaN  
+3                      0.0      NaN           NaN      NaN  
+4                      2.0      NaN           NaN      NaN  
+...                    ...      ...           ...      ...  
+106857                 0.0      NaN           NaN      NaN  
+106858                 NaN      NaN           NaN      NaN  
+106859                 0.0      0.0   3592.490527  31431.0  
+106860                 1.0      0.0  35568.690736  22337.0  
+106861                 2.0      0.0   2573.465363  53089.0  
+
+[106862 rows x 10 columns]
+2025-12-22 02:56:38 | INFO | telecom_pipeline | Merged engagement and experience data for satisfaction analysis
+2025-12-22 02:57:20 | INFO | telecom_pipeline | Engagement score computed using Euclidean distance
+2025-12-22 02:57:59 | INFO | telecom_pipeline | Experience score computed using Euclidean distance
+2025-12-22 02:57:59 | INFO | telecom_pipeline | Top 10 satisfied customers identified:         MSISDN/Number  sessions_frequency  total_session_duration  \
+106853   4.188282e+10                 502            7.255100e+07   
+6437     3.361489e+10                  17            9.966898e+06   
+92923    3.376054e+10                  15            9.279434e+06   
+13180    3.362578e+10                  17            1.855375e+07   
+13526    3.362632e+10                  18            8.791927e+06   
+76363    3.367588e+10                  15            4.865947e+06   
+37052    3.365973e+10                  16            4.035428e+06   
+63028    3.366646e+10                  11            4.536757e+06   
+92577    3.376041e+10                  12            5.321667e+06   
+57241    3.366471e+10                   7            2.927785e+06   
+
+        total_download_bytes  total_upload_bytes  total_traffic_bytes  \
+106853          4.873783e+11        4.436642e+10         5.317447e+11   
+6437            8.156743e+09        6.894830e+08         8.846226e+09   
+92923           7.811295e+09        7.034786e+08         8.514774e+09   
+13180           7.770043e+09        7.295774e+08         8.499621e+09   
+13526           7.301517e+09        6.696507e+08         7.971167e+09   
+76363           7.309542e+09        5.815688e+08         7.891111e+09   
+37052           7.081602e+09        6.242603e+08         7.705863e+09   
+63028           6.903440e+09        4.050610e+08         7.308501e+09   
+92577           6.610852e+09        5.215189e+08         7.132371e+09   
+57241           6.400774e+09        4.712445e+08         6.872018e+09   
+
+        engagement_cluster  avg_tcp_retransmission     avg_rtt  \
+106853                   1                     0.0  100.586812   
+6437                     2                     0.0   65.222014   
+92923                    2                     0.0  112.196422   
+13180                    2                     0.0   37.987983   
+13526                    2                     0.0   63.520314   
+76363                    2                     0.0   65.266667   
+37052                    2                     0.0   47.937500   
+63028                    2                     0.0   68.034217   
+92577                    2                     0.0   79.848569   
+57241                    2                     0.0   67.617791   
+
+        avg_throughput  experience_cluster  engagement_score  \
+106853    13216.922182                   0      5.311489e+11   
+6437      21199.147059                   1      8.250392e+09   
+92923      8690.900000                   0      7.918939e+09   
+13180     10629.911765                   2      7.903802e+09   
+13526      6101.944444                   2      7.375332e+09   
+76363     12840.600000                   2      7.295272e+09   
+37052     13706.687500                   2      7.110024e+09   
+63028     18252.181818                   1      6.712662e+09   
+92577     18710.000000                   1      6.536533e+09   
+57241     25502.227273                   1      6.276179e+09   
+
+        experience_score  satisfaction_score  
+106853      10643.619640        2.655744e+11  
+6437        18625.696531        4.125206e+09  
+92923        6117.840655        3.959473e+09  
+13180        8056.447264        3.951905e+09  
+13526        3528.546462        3.687668e+09  
+76363       10267.161651        3.647641e+09  
+37052       11133.223876        3.555018e+09  
+63028       15678.738547        3.356339e+09  
+92577       16136.579697        3.268274e+09  
+57241       22928.776542        3.138101e+09  
+2025-12-22 02:57:59 | INFO | telecom_pipeline | Regression Model → R2: 0.229, RMSE: 158274972.070
+2025-12-22 02:57:59 | INFO | telecom_pipeline | KMeans clustering applied on satisfaction scores
+2025-12-22 02:57:59 | INFO | telecom_pipeline | Computed satisfaction cluster summary:    satisfaction_cluster  avg_engagement_score  avg_experience_score  \
+0                     0          3.376880e+08          10085.809573   
+1                     1          5.311489e+11          10643.619640   
+
+   avg_satisfaction_score   users  
+0            1.688490e+08  106856  
+1            2.655744e+11       1  
+2025-12-22 02:58:07 | INFO | telecom_pipeline | Data inserted into SQL table '        MSISDN/Number  engagement_score  experience_score  satisfaction_score  \
+0        3.360100e+10      2.828506e+08       2536.468984        1.414266e+08   
+1        3.360100e+10      4.389803e+08       2525.492531        2.194914e+08   
+2        3.360100e+10      1.282256e+05       2526.382866        6.537601e+04   
+3        3.360101e+10      1.735193e+08       2369.622463        8.676083e+07   
+4        3.360101e+10      8.615710e+08      17624.041266        4.307943e+08   
+...               ...               ...               ...                 ...   
+106852   3.379000e+10      1.155326e+08       2505.477239        5.776758e+07   
+106853   4.188282e+10      5.311489e+11      10643.619640        2.655744e+11   
+106854   3.197021e+12      3.637168e+08       2573.366109        1.818597e+08   
+106855   3.370000e+14      4.689212e+05       2563.369623        2.357423e+05   
+106856   8.823971e+14      4.566870e+08       2572.366459        2.283448e+08   
+
+        satisfaction_cluster  
+0                          0  
+1                          0  
+2                          0  
+3                          0  
+4                          0  
+...                      ...  
+106852                     0  
+106853                     1  
+106854                     0  
+106855                     0  
+106856                     0  
+
+[106857 rows x 5 columns]' successfully.
+2025-12-22 02:58:07 | INFO | telecom_pipeline | Customer satisfaction analysis results prepared for Excel export
+2025-12-22 03:02:57 | INFO | telecom_pipeline | Telecom EDA report generated successfully
+2025-12-22 03:05:43 | INFO | telecom_pipeline | Excel formatting applied to all sheets
+2025-12-22 03:06:13 | INFO | telecom_pipeline | Excel formatting applied successfully
+2025-12-22 03:06:56 | INFO | telecom_pipeline | Added titles to each sheet in the Excel report
+2025-12-22 03:09:01 | INFO | telecom_pipeline | Excel styling applied successfully
