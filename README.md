@@ -22,24 +22,24 @@ The pipeline is designed to be scalable, transparent, and auditable, with detail
 
 ## Project Folder Structure
 
-project/
-│
-├── data/
-│   ├── telecom_data.xlsx
-│   └── cleaned_telecom_data.parquet
-│
-├── output/
-│   ├── telecom_analysis.xlsx
-│   └── plots/
-│       ├── univariate/
-│       ├── bivariate/
-│       └── multivariate/
-│
-├── logs/
-│   └── telecom_pipeline.log
-│
-├── notebook.ipynb
-└── README.md
+project/  
+│  
+├── data/  
+│   ├── telecom_data.xlsx  
+│   └── cleaned_telecom_data.parquet  
+│  
+├── output/  
+│   ├── telecom_analysis.xlsx  
+│   └── plots/  
+│       ├── univariate/  
+│       ├── bivariate/  
+│       └── multivariate/  
+│  
+├── logs/  
+│   └── telecom_pipeline.log  
+│  
+├── notebook.ipynb  
+└── README.md  
 
 ---
 
@@ -104,5 +104,5 @@ The generated Excel file (telecom_analysis.xlsx) contains:
 
 ## Author
 
-Aishwarya Kumar Singh
+Aishwarya Kumar Singh <br>
 Data Engineering & Analytics
