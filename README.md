@@ -25,18 +25,18 @@ The pipeline is designed to be scalable, transparent, and auditable, with detail
 project/  
 │  
 ├── data/  
-│   ├── telecom_data.xlsx  
-│   └── cleaned_telecom_data.parquet  
+│     ├── telecom_data.xlsx  
+│     └── cleaned_telecom_data.parquet  
 │  
 ├── output/  
-│   ├── telecom_analysis.xlsx  
-│   └── plots/  
-│          ├── univariate/  
-│          ├── bivariate/  
-│          └── multivariate/  
+│     ├── telecom_analysis.xlsx  
+│     └── plots/  
+│              ├── univariate/  
+│              ├── bivariate/  
+│              └── multivariate/  
 │  
 ├── logs/  
-│   └── telecom_pipeline.log  
+│     └── telecom_pipeline.log  
 │  
 ├── tellco_due_diligence.ipynb  
 └── README.md  
