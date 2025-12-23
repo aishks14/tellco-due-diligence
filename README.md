@@ -38,7 +38,7 @@ project/
 ├── logs/  
 │   └── telecom_pipeline.log  
 │  
-├── notebook.ipynb  
+├── tellco_due_diligence.ipynb  
 └── README.md  
 
 ---
