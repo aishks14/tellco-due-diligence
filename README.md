@@ -22,24 +22,31 @@ The pipeline is designed to be scalable, transparent, and auditable, with detail
 
 ## Project Folder Structure
 
-project/  
-│  
-├── data/  
-│     ├── telecom_data.xlsx  
-│     └── cleaned_telecom_data.parquet  
-│  
-├── output/  
-│     ├── telecom_analysis.xlsx  
-│     └── plots/  
-│              ├── univariate/  
-│              ├── bivariate/  
-│              └── multivariate/  
-│  
-├── logs/  
-│     └── telecom_pipeline.log  
-│  
-├── tellco_due_diligence.ipynb  
-└── README.md  
+```
+project/
+│
+├── data/
+│   ├── telecom_data.xlsx
+│   ├── cleaned_telecom_data.parquet
+│   ├── univariate_summary.parquet
+│   ├── user_engagement/
+│   ├── user_experience/
+│   ├── user_overview_analysis/
+│   └── user_satisfaction/
+│
+├── output/
+│   ├── telecom_analysis.xlsx
+│   └── plots/
+│       ├── univariate/
+│       ├── bivariate/
+│       └── multivariate/
+│
+├── logs/
+│   └── telecom_pipeline.log
+│
+├── tellco_due_diligence.ipynb
+└── README.md
+```
 
 ---
 
