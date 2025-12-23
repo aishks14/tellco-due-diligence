@@ -31,9 +31,9 @@ project/
 ├── output/  
 │   ├── telecom_analysis.xlsx  
 │   └── plots/  
-│       ├── univariate/  
-│       ├── bivariate/  
-│       └── multivariate/  
+│          ├── univariate/  
+│          ├── bivariate/  
+│          └── multivariate/  
 │  
 ├── logs/  
 │   └── telecom_pipeline.log  
